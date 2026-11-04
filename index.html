@@ -27,14 +27,7 @@ section{padding:70px 22px;max-width:900px;margin:auto}
 .reveal{opacity:0;transform:translateY(28px);transition:all 1s ease}
 .reveal.in{opacity:1;transform:none}
 
-/* FLORAL DECORATION */
-/* .fl{position:absolute;top:0;width:min(30vw,170px);height:auto;pointer-events:none;z-index:1} */
-/* .fl.l{left:0} */
-/* .fl.r{right:0} */
-/* FLORAL DECORATION */
-.fl{position:fixed;top:0;bottom:0;height:100vh;width:min(28vw,220px);object-fit:cover;pointer-events:none;z-index:15;opacity:0.9}
-.fl.l{left:0;object-position:left center}
-.fl.r{right:0;object-position:right center}
+/* Floral side decorations removed — clean cream background */
 
 /* COVER */
 #cover{position:fixed;inset:0;z-index:50;background:radial-gradient(circle at 50% 40%,#fffdf8,var(--cream) 70%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:30px;transition:transform 1.2s ease,opacity 1.2s ease;overflow:hidden}
@@ -130,9 +123,6 @@ footer .script{font-size:38px}
   html, body { width:100%; max-width:100%; margin:0; overflow-x:hidden; -webkit-text-size-adjust:100%; }
   #cover { position:fixed; inset:0; width:100%; height:100vh; height:100dvh; min-height:0; padding:20px 12px; padding-top:max(20px, env(safe-area-inset-top)); padding-bottom:max(20px, env(safe-area-inset-bottom)); display:flex; flex-direction:column; justify-content:center; align-items:center; overflow:hidden; }
   #cover:before { inset:6px; }
-  #cover .fl { position:absolute; top:0; bottom:0; width:42px; height:100%; height:100dvh; object-fit:cover; opacity:.45; z-index:1; pointer-events:none; }
-  #cover .fl.l { left:0; right:auto; object-position:left center; }
-  #cover .fl.r { right:0; left:auto; object-position:right center; }
   #cover > *:not(.fl) { position:relative; z-index:3; flex-shrink:0; }
   #cover .cv { width:76px; height:76px; margin-bottom:10px; border-width:3px; }
   #cover .sans { font-size:9px; letter-spacing:.18em; margin-bottom:4px; }
@@ -147,7 +137,6 @@ footer .script{font-size:38px}
   .mapbox iframe { max-width:100%; }
 }
 @media screen and (max-width:380px) {
-  #cover .fl { width:32px; opacity:.35; }
   #cover .cv { width:68px; height:68px; }
   #cover .names { font-size:38px; }
   #openBtn { max-width:calc(100vw - 80px); font-size:8px; padding:11px 10px; }
@@ -165,8 +154,6 @@ footer .script{font-size:38px}
 
 <!-- COVER -->
 <div id="cover">
-  <!-- <img class="fl l" src="images/floral-left.jpg" alt="" onerror="this.remove()"> -->
-  <!-- <img class="fl r" src="images/floral-right.jpg" alt="" onerror="this.remove()"> -->
   <img class="cv" src="images/couple.jpg" alt="" onerror="this.remove()">
   <p class="sans">The Wedding Of</p>
   <h1 class="names script">Mayur<br><span class="amp didone">&amp;</span><br>Ashwini</h1>
@@ -176,8 +163,6 @@ footer .script{font-size:38px}
 
 <!-- HERO -->
 <section id="hero">
-  <!-- <img class="fl l" src="images/floral-left.jpg" alt="" onerror="this.remove()"> -->
-  <!-- <img class="fl r" src="images/floral-right.jpg" alt="" onerror="this.remove()"> -->
   <p class="sans">The Wedding of</p>
   <h2 class="big didone"><b>M</b>AYUR<br><span class="script" style="font-size:.6em">weds</span><br><b>A</b>SHWINI</h2>
   <img class="photo" data-full src="images/couple.jpg" alt="Mayur and Ashwini" onerror="this.style.display='none'">
@@ -189,7 +174,7 @@ footer .script{font-size:38px}
   <p class="shloka">॥ ॐ श्री गणेशाय नमः ॥</p>
   <div class="orn">✦</div>
   <p>With the blessings of our beloved elders</p>
-  <p><b>Mr. Dattu Raghunath Bari &amp; Mrs. Sarala Dattu Bari</b><br>and<br><b>Mr. Vijay Tejpal Harsha &amp; Mrs. Chitra Vijay Harsha</b><br>With immense joy,we request the honour of your gracious presence and blessings on the auspicious occasion of our children's wedding.</p>
+  <p><b>Mr. Dattu Raghunath Bari &amp; Mrs. Sarala Dattu Bari</b><br>and<br><b>Mr. Vijay Tejpal Harsha &amp; Mrs. Chitra Vijay Harsha</b><br>With immense joy, we request the honour of your gracious presence and blessings on the auspicious occasion of our children's wedding.</p>
   <div class="pair">
     <div><img class="ph1" data-full src="images/groom.jpg" alt="Mayur" onerror="this.remove()"><p class="nm">MAYUR</p><p class="sm">Son of Mr. Dattu Raghunath Bari<br>&amp; Mrs. Sarala Dattu Bari</p></div>
     <div><img class="ph1" data-full src="images/bride.jpg" alt="Ashwini" onerror="this.remove()"><p class="nm">ASHWINI</p><p class="sm">Daughter of Mr. Vijay Tejpal Harsha<br>&amp; Mrs. Chitra Vijay Harsha</p></div>
