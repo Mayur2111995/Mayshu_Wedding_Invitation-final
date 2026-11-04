@@ -1090,6 +1090,197 @@ footer .script {
     transition-duration:.01ms !important;
   }
 }
+
+/* ===== FINAL MOBILE COVER FIX ===== */
+
+@media screen and (max-width: 600px) {
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  #cover {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+
+    padding: 20px 12px;
+    padding-top: max(20px, env(safe-area-inset-top));
+    padding-bottom: max(20px, env(safe-area-inset-bottom));
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+  }
+
+  #cover:before {
+    inset: 6px;
+  }
+
+  /* Floral borders: keep them behind the content */
+  #cover .fl {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    width: 42px;
+    height: 100%;
+    height: 100dvh;
+
+    object-fit: cover;
+    opacity: 0.45;
+
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  #cover .fl.l {
+    left: 0;
+    right: auto;
+    object-position: left center;
+  }
+
+  #cover .fl.r {
+    right: 0;
+    left: auto;
+    object-position: right center;
+  }
+
+  /* Keep all invitation content above floral borders */
+  #cover > *:not(.fl) {
+    position: relative;
+    z-index: 3;
+    flex-shrink: 0;
+  }
+
+  #cover .cv {
+    width: 76px;
+    height: 76px;
+    margin-bottom: 10px;
+    border-width: 3px;
+  }
+
+  #cover .sans {
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    margin-bottom: 4px;
+  }
+
+  #cover .names {
+    font-size: clamp(38px, 10vw, 52px);
+    line-height: 1.05;
+    margin: 5px 0;
+  }
+
+  #cover .amp {
+    font-size: 23px;
+    line-height: 1.3;
+  }
+
+  #cover .didone[style] {
+    font-size: 16px !important;
+    margin-top: 8px;
+  }
+
+  #openBtn {
+    margin-top: 20px;
+    padding: 12px 14px;
+    width: auto;
+    max-width: calc(100vw - 100px);
+
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    line-height: 1.5;
+
+    white-space: normal;
+    text-align: center;
+  }
+
+  /* Prevent horizontal overflow in all invitation pages */
+  section {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  #hero .fl {
+    display: none;
+  }
+
+  .ev,
+  .wishes-box,
+  .card {
+    max-width: 100%;
+  }
+
+  .strip {
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+
+  .mapbox iframe {
+    max-width: 100%;
+  }
+}
+
+/* Very small phones */
+@media screen and (max-width: 380px) {
+
+  #cover .fl {
+    width: 32px;
+    opacity: 0.35;
+  }
+
+  #cover .cv {
+    width: 68px;
+    height: 68px;
+  }
+
+  #cover .names {
+    font-size: 38px;
+  }
+
+  #openBtn {
+    max-width: calc(100vw - 80px);
+    font-size: 8px;
+    padding: 11px 10px;
+  }
+}
+
+/* iPhone landscape */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+
+  #cover {
+    justify-content: flex-start;
+    overflow-y: auto;
+  }
+
+  #cover .cv {
+    width: 55px;
+    height: 55px;
+  }
+
+  #cover .names {
+    font-size: 34px;
+  }
+
+  #openBtn {
+    margin-top: 8px;
+  }
+}
+
 </style>
 </head>
 
